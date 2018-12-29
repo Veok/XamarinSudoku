@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SudokuMobileApp"
+             x:Class="SudokuMobileApp.MainPage" BackgroundColor="GhostWhite">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="Sudoku Mobile" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" TextColor="Black" FontSize="80" HorizontalTextAlignment="Center" />
+        <Grid Margin="10,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+            <Entry Grid.Row="0" VerticalOptions="Fill"></Entry>
+            <Button Grid.Row="1" Text="New Game" BackgroundColor="CornflowerBlue"  FontSize="25"  TextColor="White" Margin="5,40,5,5"></Button>
+        </Grid>
+    </StackLayout>
+</ContentPage>
