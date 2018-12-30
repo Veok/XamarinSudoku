@@ -12,6 +12,14 @@ namespace SudokuMobileApp
 		public MainPage()
 		{
 			InitializeComponent();
-		}
-	}
+            NavigationPage.SetHasNavigationBar(this, false);
+
+        }
+
+        private async void OnStartGame(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GameBoard());
+
+        }
+    }
 }

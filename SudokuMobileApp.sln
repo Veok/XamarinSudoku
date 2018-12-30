@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuMobileApp.Android", "
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SudokuMobileApp", "SudokuMobileApp\SudokuMobileApp\SudokuMobileApp.shproj", "{113F8050-C3F6-4FC5-B285-CA3B2782ADE7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{D5592128-22CA-4553-BFB4-E118D0AF5210}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\Sudoku mobile- prototypes.jpg = ..\..\..\Desktop\Sudoku mobile- prototypes.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SudokuMobileApp\SudokuMobileApp\SudokuMobileApp.projitems*{113f8050-c3f6-4fc5-b285-ca3b2782ade7}*SharedItemsImports = 13
