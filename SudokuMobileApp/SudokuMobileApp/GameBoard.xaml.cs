@@ -29,6 +29,7 @@ namespace SudokuMobileApp
             var y = 7;
         }
 
+
         public async void OnReset(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new GameBoard());
