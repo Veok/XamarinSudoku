@@ -28,9 +28,9 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Text="Check Result" BackgroundColor="CornflowerBlue" FontSize="25"
+                <Button Grid.Row="0" Text="Check Result" Clicked="OnCheckGame" BackgroundColor="CornflowerBlue" FontSize="25"
                         TextColor="White" />
-                <Button Grid.Row="1" Text="Restart" BackgroundColor="CornflowerBlue" FontSize="25" TextColor="White" />
+                <Button Grid.Row="1" Text="Restart" Clicked="OnReset" BackgroundColor="CornflowerBlue" FontSize="25" TextColor="White" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -13,14 +13,25 @@ namespace SudokuMobileApp
     public partial class GameBoard : ContentPage
     {
         private static string[] _textBoard;
+        private readonly BoardGenerator _boardGenerator = new BoardGenerator();
 
         public GameBoard()
         {
             InitializeComponent();
-            BoardGenerator boardGenerator = new BoardGenerator();
-            _textBoard = boardGenerator.InitializeBoard();
+            _textBoard = _boardGenerator.OnInitializeBoard();
             NavigationPage.SetHasNavigationBar(this, false);
             Board.Children.Add(OnGenerateBoard());
+        }
+
+        public void OnCheckGame(object sender, EventArgs e)
+        {
+            var x = _boardGenerator.OnCheckBoard(_textBoard);
+            var y = 7;
+        }
+
+        public async void OnReset(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GameBoard());
         }
 
         private static Grid OnGenerateBoard()

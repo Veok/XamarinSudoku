@@ -7,29 +7,31 @@ using Xamarin.Forms.Internals;
 
 namespace SudokuMobileApp
 {
-    interface IBoardGenerator
+    class BoardGenerator
     {
-        bool CheckBoard();
+        private static string[] _fullBoard;
 
-        string[] InitializeBoard();
-    }
-
-    class BoardGenerator : IBoardGenerator
-    {
-        
-        public bool CheckBoard()
+        public bool OnCheckBoard(string[] board)
         {
-            throw new NotImplementedException();
+            return board == _fullBoard;
         }
 
-        public string[] InitializeBoard()
+        public string[] OnInitializeBoard()
         {
-            var boardText = ReadBoardFile().Replace("\r\n", " ");
+            var boardText = OnReadBoardFile().Replace("\r\n", " ");
             var textSplit = boardText.Split(' ');
+            _fullBoard = boardText.Split(' ');
+            var random = new Random();
+            for (var i = 0; i < 8; i++)
+            {
+                var randomIndex = random.Next(0, 81);
+                textSplit[randomIndex] = "";
+            }
+
             return textSplit;
         }
 
-        private string ReadBoardFile()
+        private static string OnReadBoardFile()
         {
             var random = new Random(DateTime.Now.Millisecond);
             var boardNumber = random.Next(1, 20);
@@ -40,7 +42,7 @@ namespace SudokuMobileApp
             try
 
             {
-                using (var reader = new System.IO.StreamReader(stream))
+                using (var reader = new StreamReader(stream))
                 {
                     var text = reader.ReadToEnd();
                     return text;
