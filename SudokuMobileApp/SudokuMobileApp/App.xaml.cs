@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
+using Application = Xamarin.Forms.Application;
 
 namespace SudokuMobileApp
 {

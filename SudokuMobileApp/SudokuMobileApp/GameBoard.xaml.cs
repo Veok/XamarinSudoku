@@ -18,7 +18,7 @@ namespace SudokuMobileApp
         public GameBoard()
         {
             InitializeComponent();
-            _textBoard = _boardGenerator.OnInitializeBoard();
+            _textBoard = _boardGenerator.OnInitializeBoard("SudokuMobileApp.Droid.Boards.board");
             NavigationPage.SetHasNavigationBar(this, false);
             Board.Children.Add(OnGenerateBoard());
         }
