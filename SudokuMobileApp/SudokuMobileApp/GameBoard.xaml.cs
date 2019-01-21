@@ -23,18 +23,26 @@ namespace SudokuMobileApp
             Board.Children.Add(OnGenerateBoard());
         }
 
+        /**
+         * Function that checks if game is corrected solved
+         */
         public void OnCheckGame(object sender, EventArgs e)
         {
             var x = _boardGenerator.OnCheckBoard(_textBoard);
             var y = 7;
         }
 
-
+        /**
+         * Function that resets game
+         */
         public async void OnReset(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new GameBoard());
         }
 
+        /**
+         * Function that generate board UI elements
+         */
         private static Grid OnGenerateBoard()
         {
             var gridBoard = new Grid();
@@ -45,6 +53,9 @@ namespace SudokuMobileApp
             return gridBoard;
         }
 
+        /**
+         * Function that generates UI cells
+         */
         private static void OnGenerateCells(Grid gridBoard)
         {
             gridBoard.BackgroundColor = Color.Black;
@@ -80,7 +91,9 @@ namespace SudokuMobileApp
                 entry.Text = _textBoard[i];
             }
         }
-
+        /**
+         * Function that generates grid columns 
+         */
         private static void GenerateGridColums(Grid gridBoard)
         {
             gridBoard.ColumnDefinitions = new ColumnDefinitionCollection()
@@ -96,7 +109,9 @@ namespace SudokuMobileApp
                 new ColumnDefinition()
             };
         }
-
+        /**
+       * Function that generates grid rows
+       */
         private static void GenerateGridRows(Grid gridBoard)
         {
             gridBoard.RowDefinitions = new RowDefinitionCollection()

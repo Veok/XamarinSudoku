@@ -12,7 +12,7 @@ namespace SudokoMobileApp.Specs
             _boardGenerator = new BoardGenerator();
         }
 
-      
+        /**Test that check correctness of board generation **/
         [Fact]
         public void OnCheckCreationOfBoard()
         {
@@ -20,6 +20,7 @@ namespace SudokoMobileApp.Specs
             Assert.True(board != null && board.Length == 81);
         }
 
+        /**Test that check board to have empty cells **/
         [Fact]
         public void OnValidateBoardCheckerWithEmptyCells()
         {

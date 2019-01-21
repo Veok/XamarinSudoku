@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{D5592128
 		..\..\..\Desktop\Sudoku mobile- prototypes.jpg = ..\..\..\Desktop\Sudoku mobile- prototypes.jpg
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokoMobileApp.Specs", "SudokoMobileApp.Specs\SudokoMobileApp.Specs.csproj", "{618D9AF3-3095-4B4A-9622-D0152B331A89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SudokoMobileApp.Specs", "SudokoMobileApp.Specs\SudokoMobileApp.Specs.csproj", "{618D9AF3-3095-4B4A-9622-D0152B331A89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuMobileApp.AutomationTests", "SudokuMobileApp.AutomationTests\SudokuMobileApp.AutomationTests.csproj", "{923C0118-D4F8-4AC8-AA65-B4E4C1BDF975}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -34,6 +36,10 @@ Global
 		{618D9AF3-3095-4B4A-9622-D0152B331A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{618D9AF3-3095-4B4A-9622-D0152B331A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{618D9AF3-3095-4B4A-9622-D0152B331A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{923C0118-D4F8-4AC8-AA65-B4E4C1BDF975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923C0118-D4F8-4AC8-AA65-B4E4C1BDF975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923C0118-D4F8-4AC8-AA65-B4E4C1BDF975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923C0118-D4F8-4AC8-AA65-B4E4C1BDF975}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

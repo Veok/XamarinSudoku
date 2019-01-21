@@ -6,18 +6,25 @@ using System.Text;
 
 namespace SudokuMobileApp
 {
-    class BoardGenerator
+    internal class BoardGenerator
     {
         private static string[] _fullBoard;
 
+        /**
+         *@param board - array that holds board filled by user
+         * Function OnCheckBoard that checks board validity
+         */
         public bool OnCheckBoard(string[] board)
         {
             return board == _fullBoard;
         }
-
-        public string[] OnInitializeBoard(string boardsBoard)
+        /**
+         *@param boardPath - string that hold path to board file
+         * Function that initialize and generates new board with random removed numbers
+         */
+        public string[] OnInitializeBoard(string boardPath)
         {
-            var boardText = OnReadBoardFile(boardsBoard).Replace("\r\n", " ");
+            var boardText = OnReadBoardFile(boardPath).Replace("\r\n", " ");
             var textSplit = boardText.Split(' ');
             _fullBoard = boardText.Split(' ');
             var random = new Random();
@@ -32,7 +39,10 @@ namespace SudokuMobileApp
 
             return textSplit;
         }
-
+        /**
+         *@param path - path to board file
+         * Function that reads board from txt files
+         */
         private static string OnReadBoardFile(string path)
         {
             var random = new Random(DateTime.Now.Millisecond);
