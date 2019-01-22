@@ -30,6 +30,10 @@ namespace SudokuMobileApp
         {
             var x = _boardGenerator.OnCheckBoard(_textBoard);
             var y = 7;
+            if (_boardGenerator.OnCheckBoard(_textBoard) == true)
+                DisplayAlert("Brawo", "Plansza rozwiązana prawidłowo", "Yay!");
+            if (_boardGenerator.OnCheckBoard(_textBoard) == false)
+                DisplayAlert("Niestety", "Plansza rozwiązana nieprawidłowo", "ehhh ://");
         }
 
         /**
